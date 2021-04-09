@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_description_project_descriptions",
+  "info": {
+    "name": "project_description",
+    "icon": "caret-right"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nprojects",
+  "info": {
+    "name": "nproject"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "github": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "stack": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.stack-item",
+      "required": true
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.project-description",
+      "required": true
+    }
+  }
+}
